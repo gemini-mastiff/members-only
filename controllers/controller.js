@@ -1,3 +1,4 @@
+const db = require("../storage/queries.js");
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcryptjs");
 
@@ -11,7 +12,7 @@ const getSignUp = (req, res) => {
 
 const postSignUp = asyncHandler(async (req, res) => {
   const hashedPassword = await bcrypt.hash(req.body.password, 10);
-  console.log(`${req.body.username} - ${hashedPassword}`);
+  await db.addUser(req.body.username, hashedPassword);
   res.redirect("/sign-up");
 });
 
