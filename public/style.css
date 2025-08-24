@@ -152,7 +152,10 @@ header {
 
 main {
   flex: 1;
+  padding: 1em 0;
 }
+
+/* posts */
 
 /* footer */
 
