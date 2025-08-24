@@ -87,3 +87,11 @@ video {
   vertical-align: baseline;
   box-sizing: border-box;
 }
+
+/* width container */
+
+.width-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
