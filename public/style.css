@@ -159,3 +159,8 @@ main {
 footer {
   background-color: var(--ACC1);
 }
+
+.footer-container {
+  text-align: center;
+  padding: 1em;
+}
