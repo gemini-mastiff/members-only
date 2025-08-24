@@ -114,8 +114,11 @@ a:hover {
 /* body */
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: var(--MAIN);
   color: var(--TEXT);
+  min-height: 100vh;
 }
 
 /* header */
@@ -143,4 +146,16 @@ header {
 
 .nav-item a:hover {
   color: var(--ACC1);
+}
+
+/* main */
+
+main {
+  flex: 1;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--ACC1);
 }
