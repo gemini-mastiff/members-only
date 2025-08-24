@@ -157,6 +157,14 @@ main {
 
 /* posts */
 
+.posts-title {
+  font-size: 1.5rem;
+}
+
+.posts {
+  margin: 1em 0;
+}
+
 /* footer */
 
 footer {
