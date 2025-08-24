@@ -155,13 +155,23 @@ main {
   padding: 1em 0;
 }
 
-/* posts */
-
-.posts-title {
+.main-title {
   font-size: 1.5rem;
 }
 
+/* posts */
+
 .posts {
+  margin: 1em 0;
+}
+
+/* form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
   margin: 1em 0;
 }
 
