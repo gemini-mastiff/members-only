@@ -88,7 +88,14 @@ video {
   box-sizing: border-box;
 }
 
-/* width container */
+/* misc. */
+
+:root {
+  --MAIN: #eae2b7;
+  --ACC1: #fcbf49;
+  --ACC2: #d62828;
+  --TEXT: #003049;
+}
 
 .width-container {
   width: 80%;
