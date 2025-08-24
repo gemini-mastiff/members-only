@@ -3,7 +3,7 @@ const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcryptjs");
 
 const getIndex = (req, res) => {
-  res.render("index", { title: "Members Only!" });
+  res.render("index", { title: "Members Only!", posts: false });
 };
 
 const getSignUp = (req, res) => {
