@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const users = require("../storage/queries.js");
 
 passport.use(
-  new localStrategy(async (findUserByUsername, password, done) => {
+  new localStrategy(async (username, password, done) => {
     try {
       const rows = await users.findUserByUsername(username);
       const user = rows[0];

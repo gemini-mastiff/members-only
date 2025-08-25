@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
-const passport = require("./config/passport.js");
+const passport = require("passport");
+require("./config/passport.js");
 const router = require("./routers/router.js");
 const path = require("path");
 
@@ -12,12 +13,12 @@ app.set("view engine", "ejs");
 
 app.use(
   session({
-    secret: proccess.env.SESSION_SECRET || "cats",
+    secret: process.env.SESSION_SECRET || "cats",
     resave: false,
     saveUninitialized: false,
   })
 );
-app.use(passport.initalize());
+app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.urlencoded({ extended: true }));

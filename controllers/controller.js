@@ -1,9 +1,10 @@
 const db = require("../storage/queries.js");
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcryptjs");
+const passport = require("passport");
 
 const getIndex = (req, res) => {
-  res.render("index", { title: "Members Only!", posts: false });
+  res.render("index", { title: "Members Only!", posts: false, user: req.user });
 };
 
 const getSignUp = (req, res) => {
@@ -20,9 +21,15 @@ const getLogIn = (req, res) => {
   res.render("log-in", { title: "Log In" });
 };
 
+const postLogIn = passport.authenticate("local", {
+  successRedirect: "/",
+  failureRedirect: "/",
+});
+
 module.exports = {
   getIndex,
   getSignUp,
   postSignUp,
   getLogIn,
+  postLogIn,
 };
