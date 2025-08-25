@@ -16,8 +16,13 @@ const postSignUp = asyncHandler(async (req, res) => {
   res.redirect("/sign-up");
 });
 
+const getLogIn = (req, res) => {
+  res.render("log-in", { title: "Log In" });
+};
+
 module.exports = {
   getIndex,
   getSignUp,
   postSignUp,
+  getLogIn,
 };
